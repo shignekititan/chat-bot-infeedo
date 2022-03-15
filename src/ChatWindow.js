@@ -35,9 +35,7 @@ export default function ChatWindow(){
 
     return(
         //Main Container 
-       <Stack direction='row' height="100vh" alignItems="center" justifyContent={"center"} backgroundColor="black" >
-           {/* Content Box */}
-            <Stack  sx={{ alignItems:"center",width:'80vw', backgroundColor:backColor, color:textColor, justifyContent:"center", display:'flex',margin:'5px',padding:'10px', border:'1px solid black', borderRadius:'5px'}}>
+            <Stack  sx={{ alignItems:"center", height:"100vh", backgroundColor:backColor, color:textColor, justifyContent:"center", display:'flex',paddingX:'20px'}}>
             {/* Header*/}
             <Stack direction='row' width="100%" alignItems='center' justifyContent="flex-end"  borderBottom={1} >
                 {/* Bot Name */}
@@ -67,7 +65,6 @@ export default function ChatWindow(){
                 </InputAdornment>
             </Stack>
         </Stack>
-       </Stack>
     )
 
 }
