@@ -35,7 +35,7 @@ export default function ChatWindow(){
 
     return(
         //Main Container 
-            <Stack  sx={{ alignItems:"center", height:"100vh", backgroundColor:backColor, color:textColor, justifyContent:"center", display:'flex',paddingX:'20px'}}>
+            <Stack  sx={{ paddingTop:'20px', alignItems:"center", height:"100vh", backgroundColor:backColor, color:textColor, display:'flex',paddingX:'20px'}}>
             {/* Header*/}
             <Stack direction='row' width="100%" alignItems='center' justifyContent="flex-end"  borderBottom={1} >
                 {/* Bot Name */}
@@ -59,7 +59,7 @@ export default function ChatWindow(){
             </Stack>
             {/* Message Input and  Button */}
             <Stack width='100%' component='form' alignItems={'center'} direction='row' onSubmit={handleSend} >
-                <TextField placeholder="Type Something..." sx={{width:'100%',margin:'0px'}}onChange={handleChange} value={message} name='user_text' size='small' autoComplete="off"></TextField>
+                <TextField placeholder="Type Something..." sx={{width:'100%',margin:'0px'}}onChange={handleChange} value={message} name='user_text' size='small' autoComplete="off" focused={true}></TextField>
                 <InputAdornment position="end">
                     <SendRoundedIcon fontSize="large" onClick={handleSend}/>
                 </InputAdornment>
